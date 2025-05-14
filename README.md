@@ -42,7 +42,6 @@ Code
 ├── style.css         # Estilos CSS
 ├── README.md         # Documentación del proyecto
 └── .gitignore        # Archivos y directorios a ignorar por git
-
 Explicación:
 contracts/: Contiene el contrato inteligente desarrollado en Solidity.
 Token.sol: Contrato que gestiona la emisión de certificados como tokens ERC-1155.
@@ -74,4 +73,3 @@ Licencia
 Este proyecto está bajo la Licencia MIT.
 
 Derechos: @Rodrigocrem
-
