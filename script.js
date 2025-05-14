@@ -17,10 +17,10 @@ const contractABI = [
 ];
 
 const tokenNames = {
-  0: "Taller educativo",
-  1: "Jornada de limpieza",
-  2: "Campana de reforestacion",
-  3: "Coordinador de evento",
+  0: "Café Solidario:",
+  1: "Residencia de Ancianos:",
+  2: "Donación de Ropa y Alimentos:",
+  3: "Comedor Social:",
   4: "Apoyo Escolar",
   5: "Recogida de Alimentos"
 };
@@ -79,6 +79,7 @@ mintForm.addEventListener('submit', async (e) => {
 
   try {
     showStatus("⏳ Transacción enviada...");
+    // Enviamos la cantidad tal cual, sin conversión a decimales
     const tx = await contract.entregarCertificado(to, id, cantidad);
     await tx.wait();
     showStatus(`✅ Certificado emitido correctamente (Tx: ${tx.hash})`, 'success');
@@ -98,6 +99,7 @@ const getTokenBalance = async () => {
 
       for (const id of ids) {
         const balance = await contract.balanceOf(address, id);
+        // balance es BigNumber, convertimos a string directamente para mostrar entero
         balancesText += `Tienes ${balance.toString()} tokens de ${tokenNames[id]} (ID: ${id})\n`;
       }
 
