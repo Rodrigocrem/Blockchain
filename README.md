@@ -43,7 +43,8 @@ Se realizaron diversas pruebas de emisión de certificados y consulta de balance
 
 ### Ejemplo de transacción exitosa
 
-![Captura de pantalla](captura.png)
+![image](https://github.com/user-attachments/assets/683d5567-55a5-4e13-ac3d-d3d66e3a1397)
+
 
 ## Estructura del Proyecto
 /
