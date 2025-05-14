@@ -48,20 +48,20 @@ Se realizaron diversas pruebas de emisión de certificados y consulta de balance
 ## Estructura del Proyecto
 /
 ├── contracts/ # Contratos inteligentes (Solidity)
-
 │ └── Token.sol # Contrato ERC-1155
+├── index.html # Página principal de la WebApp
+├── script.js # Lógica JavaScript para interactuar con el contrato
+├── style.css # Estilos CSS
+├── README.md # Documentación del proyecto
+└── .gitignore # Archivos y directorios a ignorar por git
 
-├── public/ # Archivos estáticos para la web
-
-│ ├── index.html # Página principal de la WebApp
-
-│ ├── style.css # Estilos CSS
-
-│ └── script.js # Lógica JavaScript para interactuar con el contrato
-
-├── .gitignore # Archivos y directorios a ignorar por git
-
-└── README.md # Documentación del proyecto
+- **contracts/**: Contiene el contrato inteligente desarrollado en **Solidity**.
+  - **Token.sol**: Es el contrato inteligente que gestiona la emisión de certificados en forma de tokens ERC-1155.
+- **index.html**: La página principal de la WebApp.
+- **script.js**: Código JavaScript que interactúa con el contrato inteligente en la blockchain.
+- **style.css**: Los estilos CSS de la interfaz de la web.
+- **README.md**: Documentación de todo el proyecto.
+- **.gitignore**: Archivos y directorios que deben ser ignorados por Git.
 
 
 
