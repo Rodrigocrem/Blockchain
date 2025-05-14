@@ -116,10 +116,25 @@ select:focus {
   text-align: center;
 }
 
-#balance {
-  margin-top: 10px;
-  font-size: 16px;
+#balanceList {
+  list-style-type: none;
+  padding-left: 0;
   color: #ccc;
+  font-size: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#balanceList li {
+  padding: 6px 10px;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.3s;
+}
+
+#balanceList li:hover {
+  background-color: #444;
+  color: #fff;
+  cursor: default;
 }
 
 /* Nueva sección para el balance de Sepolia */
