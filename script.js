@@ -2,7 +2,7 @@ const connectButton = document.getElementById('connectButton');
 const userAddressDisplay = document.getElementById('userAddress');
 const mintForm = document.getElementById('mintForm');
 const status = document.getElementById('status');
-const balanceDisplay = document.getElementById('balance');
+const balanceList = document.getElementById('balanceList');
 const sepoliaBalanceDisplay = document.getElementById('sepoliaBalance');
 
 let signer;
@@ -79,7 +79,7 @@ mintForm.addEventListener('submit', async (e) => {
 
   try {
     showStatus("⏳ Transacción enviada...");
-    // Enviamos la cantidad tal cual, sin conversión a decimales
+    // Enviamos cantidad como entero sin decimales
     const tx = await contract.entregarCertificado(to, id, cantidad);
     await tx.wait();
     showStatus(`✅ Certificado emitido correctamente (Tx: ${tx.hash})`, 'success');
@@ -95,21 +95,20 @@ const getTokenBalance = async () => {
     try {
       const address = await signer.getAddress();
       const ids = Object.keys(tokenNames).map(Number);
-      let balancesText = '';
+      balanceList.innerHTML = ''; // Limpiamos antes
 
       for (const id of ids) {
         const balance = await contract.balanceOf(address, id);
-        // balance es BigNumber, convertimos a string directamente para mostrar entero
-        balancesText += `Tienes ${balance.toString()} tokens de ${tokenNames[id]} (ID: ${id})\n`;
+        const li = document.createElement('li');
+        li.textContent = `Tienes ${balance.toString()} tokens de ${tokenNames[id]} (ID: ${id})`;
+        balanceList.appendChild(li);
       }
-
-      balanceDisplay.textContent = balancesText;
     } catch (error) {
       console.error('Error al obtener el balance:', error);
-      balanceDisplay.textContent = 'Error al obtener el balance.';
+      balanceList.innerHTML = '<li>Error al obtener el balance.</li>';
     }
   } else {
-    balanceDisplay.textContent = 'Conecta MetaMask primero.';
+    balanceList.innerHTML = '<li>Conecta MetaMask primero.</li>';
   }
 };
 
