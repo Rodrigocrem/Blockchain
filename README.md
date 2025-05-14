@@ -78,11 +78,12 @@ Se realizaron diversas pruebas de emisión de certificados y consulta de balance
 
 1. **Clonar el repositorio**:
   git clone https://github.com/rodrigocrem/Blockchain.git
+
   cd Blockchain
-2. **Instalar dependencias** (para trabajar con el contrato y frontend localmente):
+3. **Instalar dependencias** (para trabajar con el contrato y frontend localmente):
   npm install
 
-3. **Desplegar el contrato en Sepolia**:
+4. **Desplegar el contrato en Sepolia**:
 - Usa **Remix** o cualquier herramienta de desarrollo de Ethereum para desplegar el contrato en **Sepolia**.
 
 4. **Desplegar la Web en GitHub Pages**:
