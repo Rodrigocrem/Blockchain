@@ -97,6 +97,6 @@ Sigue los pasos a continuación para instalar y ejecutar el proyecto en tu máqu
    Sube el contenido del directorio public/ a GitHub y configura GitHub Pages para servir la web desde la rama main.
 ---
 
-##📝 Licencia:
+## 📝 Licencia:
 
 Este proyecto está bajo la Licencia MIT.
