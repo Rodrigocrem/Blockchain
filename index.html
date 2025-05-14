@@ -11,9 +11,9 @@
 <body>
   <div class="container">
     <header>
-      <img src="LogoBlockChain.png" alt="Logo ONG" class="logo" />
+      <img src="public/Logo.png" alt="Logo ONG" class="logo" />
       <h1>Certificados ONG</h1>
-      <button id="connectButton" class="button">Conectar con Metamask</button>
+      <button id="connectButton" class="button">Conectar con MetaMask</button>
     </header>
 
     <section class="wallet-section">
@@ -29,10 +29,10 @@
 
         <label for="tokenId">Tipo de certificado (ID)</label>
         <select id="tokenId" required>
-          <option value="0">Café Solidario</option>
-          <option value="1">Residencia de Ancianos</option>
-          <option value="2">Donación de Ropa y Alimentos</option>
-          <option value="3">Comer Social</option>
+          <option value="0">Taller educativo</option>
+          <option value="1">Jornada de limpieza</option>
+          <option value="2">Campana de reforestacion</option>
+          <option value="3">Coordinador de evento</option>
           <option value="4">Apoyo Escolar</option>
           <option value="5">Recogida de Alimentos</option>
         </select>
@@ -47,7 +47,7 @@
 
     <section class="balance-section">
       <h2>Tu balance de tokens</h2>
-      <p id="balance">Cargando...</p>
+      <pre id="balance">Cargando...</pre>
     </section>
   </div>
 </body>
