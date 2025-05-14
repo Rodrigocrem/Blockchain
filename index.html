@@ -13,12 +13,11 @@
     <header>
       <img src="public/Logo.png" alt="Logo ONG" class="logo" />
       <h1>Certificados ONG</h1>
-      <button id="connectButton">Conectar con Metamask</button>
+      <button id="connectButton" class="button">Conectar con Metamask</button>
     </header>
 
     <section class="wallet-section">
       <p id="userAddress">No conectado</p>
-      <!-- Sección para mostrar el saldo de Sepolia -->
       <p id="sepoliaBalance">Cargando Sepolia...</p>
     </section>
 
@@ -26,10 +25,10 @@
       <h2>Emitir certificado</h2>
       <form id="mintForm">
         <label for="recipient">Dirección del destinatario</label>
-        <input type="text" id="recipient" placeholder="0x...">
+        <input type="text" id="recipient" placeholder="0x..." required />
 
         <label for="tokenId">Tipo de certificado (ID)</label>
-        <select id="tokenId">
+        <select id="tokenId" required>
           <option value="0">Taller educativo</option>
           <option value="1">Jornada de limpieza</option>
           <option value="2">Campaña de reforestación</option>
@@ -37,14 +36,13 @@
         </select>
 
         <label for="amount">Cantidad</label>
-        <input type="number" id="amount" value="1" min="1" step="1">
+        <input type="number" id="amount" value="1" min="1" step="1" required />
 
-        <button type="submit">Mintear</button>
+        <button type="submit" class="button">Mintear</button>
       </form>
       <p id="status"></p>
     </section>
 
-    <!-- Sección para mostrar el balance de tokens -->
     <section class="balance-section">
       <h2>Tu balance de tokens</h2>
       <p id="balance">Cargando...</p>

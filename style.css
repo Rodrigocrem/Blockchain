@@ -36,7 +36,7 @@ h1 {
   color: #ffffff;
 }
 
-button {
+.button {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
@@ -48,7 +48,7 @@ button {
 }
 
 form button {
-  margin-top: 19px; /* Corregido 15px + 4px extra */
+  margin-top: 19px;
 }
 
 button:hover {
@@ -89,7 +89,6 @@ select:focus {
   color: #ccc;
 }
 
-/*Feedback visual animado */
 .status-success {
   color: #4caf50;
   animation: fadeIn 0.4s ease-in-out;
@@ -129,4 +128,34 @@ select:focus {
   font-size: 16px;
   color: #ccc;
   text-align: center;
+}
+
+/* Nuevas animaciones de transición */
+input,
+select {
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #888;
+}
+
+button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+#status {
+  font-size: 14px;
+  color: #ccc;
+  font-weight: bold;
+}
+
+#status.success {
+  color: green;
+}
+
+#status.error {
+  color: red;
 }
