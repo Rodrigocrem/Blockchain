@@ -1,75 +1,94 @@
-Certificados ONG - Blockchain con ERC-1155
-Este proyecto tiene como objetivo la creación y despliegue de un sistema basado en blockchain para la emisión de certificados en formato token ERC-1155 para una ONG. Los voluntarios reciben certificados por su participación en actividades de la ONG a través de tokens no fungibles (NFTs).
+# Certificados ONG - Blockchain con ERC-1155
 
-Tecnologías utilizadas
-Ethereum (Sepolia): La testnet de Ethereum utilizada para desplegar el contrato inteligente.
-Solidity: Lenguaje de programación utilizado para desarrollar el contrato inteligente.
-MetaMask: Billetera de Ethereum que permite a los usuarios interactuar con la blockchain.
-Frontend: Desarrollado con HTML, CSS y JavaScript, utilizando ethers.js para la integración con el contrato inteligente.
-GitHub Pages: Usado para desplegar la web de manera pública.
-Características del Proyecto
-Contrato inteligente ERC-1155: Emisión de certificados a los voluntarios como tokens ERC-1155. Cada token representa un tipo de participación (e.g., "Taller educativo", "Jornada de limpieza").
-WebApp: Plataforma que permite a los usuarios conectarse con MetaMask, emitir certificados y consultar balances de tokens y Sepolia (ETH).
-GitHub Pages: Despliegue público de la aplicación web.
-Funcionalidades
-Conectar con MetaMask: Los usuarios pueden conectarse a través de MetaMask para interactuar con la blockchain.
-Emitir Certificados: Los administradores pueden emitir certificados (tokens) a las direcciones de los voluntarios.
-Consultar Balance: Los usuarios pueden ver el balance de tokens de cada tipo de certificado.
-Mostrar Balance de Sepolia: Los usuarios pueden consultar su saldo de Sepolia (ETH).
-Despliegue del Proyecto
-Contrato inteligente en Sepolia: Desplegado en la testnet Sepolia utilizando Remix y MetaMask.
-WebApp en GitHub Pages: Desplegada usando GitHub Pages para facilitar el acceso público.
-Cómo interactuar con la Web
-Conecta tu MetaMask a la testnet Sepolia.
-Dirígete a la web desplegada (en GitHub Pages).
-Haz clic en "Conectar con MetaMask" para conectar tu billetera.
-Selecciona el tipo de certificado que deseas recibir.
-Introduce la dirección del destinatario y la cantidad de tokens que deseas emitir.
-Visualiza el saldo de Sepolia (ETH) y los tokens recibidos.
-Pruebas
-Se realizaron diversas pruebas de emisión de certificados y consulta de balances. Los certificados se emiten correctamente y el saldo de tokens se actualiza adecuadamente después de cada transacción.
+Este proyecto tiene como objetivo la creación y despliegue de un sistema basado en **blockchain** para la emisión de certificados en formato **token ERC-1155** para una ONG. Los voluntarios reciben certificados por su participación en actividades de la ONG a través de **tokens no fungibles (NFTs)**.
 
-Ejemplo de transacción exitosa
-image
+---
 
-Estructura del Proyecto
-Code
-/
-├── contracts/        # Contratos inteligentes (Solidity)
-│   └── Token.sol     # Contrato ERC-1155
-├── index.html        # Página principal de la WebApp
-├── script.js         # Lógica JavaScript para interactuar con el contrato
-├── style.css         # Estilos CSS
-├── README.md         # Documentación del proyecto
-└── .gitignore        # Archivos y directorios a ignorar por git
-Explicación:
-contracts/: Contiene el contrato inteligente desarrollado en Solidity.
-Token.sol: Contrato que gestiona la emisión de certificados como tokens ERC-1155.
-index.html: Página principal de la WebApp.
-script.js: Código JavaScript que interactúa con el contrato inteligente.
-style.css: Estilos CSS de la interfaz web.
-README.md: Documentación del proyecto.
-.gitignore: Archivos y directorios que deben ser ignorados por Git.
-Instrucciones para Desarrolladores
-Clonar el repositorio:
+## 📖 Descripción
 
-bash
-git clone https://github.com/rodrigocrem/Blockchain.git
-cd Blockchain
-Instalar dependencias (para trabajar con el contrato y frontend localmente):
+Este proyecto busca implementar una solución para gestionar la emisión de certificados en formato token, utilizando la tecnología de **blockchain**. Los certificados representan la participación de los voluntarios en actividades de la ONG, y cada certificado es un token ERC-1155. La solución incluye:
+- Un contrato inteligente en la red **Sepolia**.
+- Una interfaz web interactiva que permite la conexión con **MetaMask** para interactuar con la blockchain y emitir certificados.
 
-bash
-npm install
-Desplegar el contrato en Sepolia:
+---
 
-Usa Remix o cualquier herramienta de desarrollo de Ethereum para desplegar el contrato en Sepolia.
-Desplegar la Web en GitHub Pages:
+## 🚀 Características
 
-Sube el contenido del directorio public/ a GitHub y configura GitHub Pages para servir la web desde la rama main.
-Contribuciones
-Las contribuciones al proyecto son bienvenidas. Si tienes alguna mejora o corrección que quieras proponer, siéntete libre de abrir un pull request.
+- **Emisión de certificados:** Los administradores de la ONG pueden emitir certificados (tokens ERC-1155) a los voluntarios.
+- **Visualización de saldo:** Los usuarios pueden consultar su saldo de **Sepolia (ETH)** y los tokens que han recibido.
+- **Interacción con MetaMask:** Los usuarios pueden conectarse a la **testnet Sepolia** a través de **MetaMask**.
+- **Despliegue público:** El sistema está disponible públicamente en **GitHub Pages**.
 
-Licencia
+---
+
+## 🛠️ Tecnologías utilizadas
+
+El proyecto utiliza las siguientes tecnologías:
+
+### Frontend:
+- **HTML5:** Para la estructura de la web.
+- **CSS3:** Para el diseño y presentación.
+- **JavaScript:** Para la lógica y la interacción con la blockchain mediante **ethers.js**.
+
+### Blockchain:
+- **Ethereum (Sepolia)**: Red de blockchain utilizada para el contrato inteligente.
+- **Solidity:** Lenguaje de programación utilizado para desarrollar el contrato inteligente ERC-1155.
+- **MetaMask**: Billetera de Ethereum para interactuar con el contrato desplegado en Sepolia.
+
+### Despliegue:
+- **GitHub Pages**: Para el despliegue de la aplicación web.
+
+---
+
+## 📂 Estructura del proyecto
+Certificados-ONG/
+├── contracts/ # Contratos inteligentes (Solidity)
+│ └── Token.sol # Contrato ERC-1155
+├── index.html # Página principal de la WebApp
+├── script.js # Lógica JavaScript para interactuar con el contrato
+├── style.css # Estilos CSS
+├── README.md # Documentación del proyecto
+└── .gitignore # Archivos y directorios a ignorar por git
+
+---
+
+### Explicación:
+- **contracts/**: Contiene el contrato inteligente desarrollado en **Solidity**.
+  - **Token.sol**: El contrato inteligente que gestiona la emisión de certificados en forma de tokens ERC-1155.
+- **index.html**: La página principal de la WebApp.
+- **script.js**: Código JavaScript que interactúa con el contrato inteligente en la blockchain.
+- **style.css**: Los estilos CSS de la interfaz de la web.
+- **README.md**: Este archivo de documentación.
+- **.gitignore**: Archivos y directorios que deben ser ignorados por Git.
+
+---
+
+## 📋 Requisitos previos
+
+Para ejecutar este proyecto, necesitarás tener instalado:
+
+- **Node.js** (versión 14 o superior)
+- **npm** o **yarn**
+- **Remix** o **Hardhat** (para compilar y desplegar contratos inteligentes)
+- **MetaMask** para interactuar con la red de Sepolia
+
+---
+
+## 🚀 Instalación y ejecución
+
+Sigue los pasos a continuación para instalar y ejecutar el proyecto en tu máquina local:
+
+1. **Clona este repositorio:**
+   ```bash
+   git clone https://github.com/rodrigocrem/Blockchain.git
+   cd Blockchain
+2. **Instala las dependencias:**
+   npm install.
+3. **Desplegar el contrato en sepolia:**
+   Usa Remix o cualquier herramienta de desarrollo de Ethereum para desplegar el contrato en Sepolia.
+4. **Des`legar la Web en GitHub Pages:**
+   Sube el contenido del directorio public/ a GitHub y configura GitHub Pages para servir la web desde la rama main.
+---
+
+##📝 Licencia
 Este proyecto está bajo la Licencia MIT.
-
-Derechos: @Rodrigocrem
