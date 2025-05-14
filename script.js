@@ -17,10 +17,10 @@ const contractABI = [
 ];
 
 const tokenNames = {
-  0: "Café Solidario:",
-  1: "Residencia de Ancianos:",
-  2: "Donación de Ropa y Alimentos:",
-  3: "Comedor Social:",
+  0: "Café Solidario",
+  1: "Residencia de Ancianos",
+  2: "Donación de Ropa y Alimentos",
+  3: "Comedor Social",
   4: "Apoyo Escolar",
   5: "Recogida de Alimentos"
 };
