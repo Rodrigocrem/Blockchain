@@ -18,6 +18,8 @@ contract ParticipacionONG is ERC1155, Ownable {
         nombresTokens[1] = "Jornada de limpieza";
         nombresTokens[2] = "Campana de reforestacion";
         nombresTokens[3] = "Coordinador de evento";
+        nombresTokens[4] = "Apoyo Escolar";
+        nombresTokens[5] = "Recogida de Alimentos";
     }
 
     // Función para entregar certificados (solo el owner puede)
