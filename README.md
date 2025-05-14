@@ -50,10 +50,13 @@ Se realizaron diversas pruebas de emisión de certificados y consulta de balance
 ├── contracts/ # Contratos inteligentes (Solidity)
 
 │ └── Token.sol # Contrato ERC-1155
+
 ├── public/ # Archivos estáticos para la web
 
 │ ├── index.html # Página principal de la WebApp
+
 │ ├── style.css # Estilos CSS
+
 │ └── script.js # Lógica JavaScript para interactuar con el contrato
 
 ├── .gitignore # Archivos y directorios a ignorar por git
