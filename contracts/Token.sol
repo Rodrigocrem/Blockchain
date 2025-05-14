@@ -24,9 +24,8 @@ contract ParticipacionONG is ERC1155, Ownable {
 
     // Función para entregar certificados (solo el owner puede)
     function entregarCertificado(address to, uint256 id, uint256 cantidad) public onlyOwner {
-        //uint256 cantidadConDecimales = cantidad * 10**18;  // Multiplicamos para decimales
-        _mint(to, id, cantidadConDecimales, "");
-        emit TokenEntregado(to, id, cantidadConDecimales);
+        _mint(to, id, cantidad, "");
+        emit TokenEntregado(to, id, cantidad);
     }
 
     // Permitir actualizar el URI si se cambia el host de los metadatos
