@@ -7,6 +7,7 @@ const sepoliaBalanceDisplay = document.getElementById('sepoliaBalance');
 
 let signer;
 let contract;
+let provider;
 
 const contractAddress = "0x27fb403eec7b81a8176d8401fd836f9c76c94661"; // Cambia por tu dirección desplegada
 
@@ -29,16 +30,23 @@ connectButton.addEventListener('click', async () => {
   if (window.ethereum) {
     try {
       const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      provider = new ethers.providers.Web3Provider(window.ethereum);
       signer = provider.getSigner();
       contract = new ethers.Contract(contractAddress, contractABI, signer);
-      userAddressDisplay.textContent = `Conectado: ${accounts[0]}`;
+      
+      // Verificar la red de MetaMask
+      const network = await provider.getNetwork();
+      if (network.chainId !== 11155111) {  // Sepolia testnet chainId
+        alert("Por favor, conecta MetaMask a la red Sepolia.");
+        return;
+      }
 
+      userAddressDisplay.textContent = `Conectado: ${accounts[0]}`;
       await getSepoliaBalance();
       await getTokenBalance();
     } catch (err) {
       console.error(err);
-      userAddressDisplay.textContent = '❌ Error al conectar con MetaMask';
+      userAddressDisplay.textContent = '❌ Error al conectar con MetaMask. Revisa la consola.';
     }
   } else {
     alert("Instala MetaMask para usar esta app.");
@@ -47,9 +55,13 @@ connectButton.addEventListener('click', async () => {
 
 const getSepoliaBalance = async () => {
   if (signer) {
-    const balance = await signer.getBalance();
-    const balanceInEth = ethers.utils.formatEther(balance);
-    sepoliaBalanceDisplay.textContent = `Balance Sepolia: ${balanceInEth} ETH`;
+    try {
+      const balance = await signer.getBalance();
+      const balanceInEth = ethers.utils.formatEther(balance);
+      sepoliaBalanceDisplay.textContent = `Balance Sepolia: ${balanceInEth} ETH`;
+    } catch (err) {
+      sepoliaBalanceDisplay.textContent = '❌ Error al obtener saldo Sepolia.';
+    }
   } else {
     sepoliaBalanceDisplay.textContent = 'Conecta MetaMask primero.';
   }
@@ -79,7 +91,6 @@ mintForm.addEventListener('submit', async (e) => {
 
   try {
     showStatus("⏳ Transacción enviada...");
-    // Enviamos cantidad como entero sin decimales
     const tx = await contract.entregarCertificado(to, id, cantidad);
     await tx.wait();
     showStatus(`✅ Certificado emitido correctamente (Tx: ${tx.hash})`, 'success');
