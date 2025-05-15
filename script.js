@@ -38,7 +38,8 @@ connectButton.addEventListener('click', async () => {
       await getTokenBalance();
     } catch (err) {
       console.error(err);
-      userAddressDisplay.textContent = '❌ Error al conectar con MetaMask';
+      userAddressDisplay.textContent = 'Error al conectar con MetaMask';
+      userAddressDisplay.style.color = 'red'; // <- También en caso de error
     }
   } else {
     alert("Instala MetaMask para usar esta app.");
@@ -63,17 +64,17 @@ mintForm.addEventListener('submit', async (e) => {
   let cantidad = parseInt(document.getElementById('amount').value);
 
   if (!contract) {
-    showStatus("❌ Conecta MetaMask primero.");
+    showStatus("Conecta MetaMask primero.");
     return;
   }
 
   if (!ethers.utils.isAddress(to)) {
-    showStatus("❌ Dirección de destinatario no válida.");
+    showStatus("Dirección de destinatario no válida.");
     return;
   }
 
   if (cantidad <= 0) {
-    showStatus("❌ La cantidad debe ser mayor que 0.");
+    showStatus("La cantidad debe ser mayor que 0.");
     return;
   }
 
@@ -86,7 +87,7 @@ mintForm.addEventListener('submit', async (e) => {
     await getTokenBalance();
   } catch (err) {
     console.error(err);
-    showStatus("❌ Error al mintear. Revisa la consola.", 'error');
+    showStatus("Error al mintear. Revisa la consola.", 'error');
   }
 });
 

@@ -14,10 +14,10 @@ contract ParticipacionONG is ERC1155, Ownable {
 
     // Constructor con definición del owner y URI base
     constructor() ERC1155("https://rodrigocrem.github.io/ProyectoFinalBlockChain/{id}.json") Ownable(msg.sender) {
-        nombresTokens[0] = "Taller educativo";
-        nombresTokens[1] = "Jornada de limpieza";
-        nombresTokens[2] = "Campana de reforestacion";
-        nombresTokens[3] = "Coordinador de evento";
+        nombresTokens[0] = "Café Solidario";
+        nombresTokens[1] = "Residencia de Ancianos";
+        nombresTokens[2] = "Donación de Ropa y Alimentos";
+        nombresTokens[3] = "Comedor Social";
         nombresTokens[4] = "Apoyo Escolar";
         nombresTokens[5] = "Recogida de Alimentos";
     }

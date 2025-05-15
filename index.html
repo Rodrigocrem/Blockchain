@@ -5,39 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Certificados ONG</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="mineria-de-etereum.png" type="image/png">
   <script defer src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
   <div class="container">
     <header>
-      <img src="LogoBlockChain.png" alt="Logo ONG" class="logo" />
-      <h1>Certificados ONG</h1>
+      <img src="LogoBlockChain.png" alt="Logo ONG" class="logo"/>
       <button id="connectButton" class="button">Conectar con MetaMask</button>
     </header>
 
     <section class="wallet-section">
-      <p id="userAddress">No conectado</p>
-      <p id="sepoliaBalance">Cargando Sepolia...</p>
+      <p id="userAddress" class="secundario">No conectado</p>
+      <p id="sepoliaBalance" class="primario-s">Cargando Sepolia...</p>
     </section>
 
     <section class="mint-section">
-      <h2>Emitir certificado</h2>
+      <h2 class="primario">Emitir certificado</h2>
       <form id="mintForm">
-        <label for="recipient">Dirección del destinatario</label>
+        <label for="recipient" class="primario-s">Dirección del destinatario</label>
         <input type="text" id="recipient" placeholder="0x..." required />
 
-        <label for="tokenId">Tipo de certificado (ID)</label>
+        <label for="tokenId" class="primario-s">Tipo de certificado (ID)</label>
         <select id="tokenId" required>
-          <option value="0">Taller educativo</option>
-          <option value="1">Jornada de limpieza</option>
-          <option value="2">Campana de reforestacion</option>
-          <option value="3">Coordinador de evento</option>
+          <option value="0">Café Solidario</option>
+          <option value="1">Residencia de Ancianos</option>
+          <option value="2">Donación de Ropa y Alimentos</option>
+          <option value="3">Comedor Social</option>
           <option value="4">Apoyo Escolar</option>
           <option value="5">Recogida de Alimentos</option>
         </select>
 
-        <label for="amount">Cantidad</label>
+        <label for="amount" class="primario-s">Cantidad</label>
         <input type="number" id="amount" value="1" min="1" step="1" required />
 
         <button type="submit" class="button">Mintear</button>
@@ -46,8 +46,8 @@
     </section>
 
     <section class="balance-section">
-      <h2>Tu balance de tokens</h2>
-      <pre id="balance">Cargando...</pre>
+      <h2 class="primario">Tu balance de tokens</h2>
+      <pre id="balance" class="secundario">Cargando...</pre>
     </section>
   </div>
 </body>

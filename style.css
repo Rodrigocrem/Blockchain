@@ -12,11 +12,23 @@ body {
 
 .container {
   background-color: #1a1a1a;
-  padding: 30px;
+  padding: 70px;
   border-radius: 16px;
   max-width: 500px;
   width: 100%;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.secundario{
+  color:#888;
+}
+
+.primario{
+  color:blueviolet
+}
+
+.primario-s{
+  color:rgb(181, 139, 219)
 }
 
 header {
@@ -25,9 +37,9 @@ header {
 }
 
 .logo {
-  height: 60px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  height: 100px;
+  margin-bottom: 5px;
+  border-radius: 5px;
 }
 
 h1 {
