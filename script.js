@@ -2,7 +2,7 @@ const connectButton = document.getElementById('connectButton');
 const userAddressDisplay = document.getElementById('userAddress');
 const mintForm = document.getElementById('mintForm');
 const status = document.getElementById('status');
-const balanceList = document.getElementById('balanceList');
+const balanceList = document.getElementById('balance');
 const sepoliaBalanceDisplay = document.getElementById('sepoliaBalance');
 
 let signer;
