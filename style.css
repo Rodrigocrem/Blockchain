@@ -9,11 +9,19 @@ body {
   min-height: 100vh;
   padding: 40px 20px;
 }
-.estilomint{
-  padding:6%;
-  align-content: center;
 
+#pico {
+  height: 30px;
+  margin-right: 5px;
 }
+
+.estilomint {
+  padding: 6%;
+  display: flex;          /* Flex para alinear los hijos */
+  align-items: center;    /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente si lo deseas */
+}
+
 .container {
   background-color: #1a1a1a;
   padding: 70px;
@@ -23,10 +31,7 @@ body {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
-#pico{
-  height: 30px;
-  margin-right: 5px;
-}
+
 
 .secundario{
   color:#888;
