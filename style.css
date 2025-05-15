@@ -9,7 +9,11 @@ body {
   min-height: 100vh;
   padding: 40px 20px;
 }
+.estilomint{
+  padding:6%;
+  align-content: center;
 
+}
 .container {
   background-color: #1a1a1a;
   padding: 70px;
@@ -17,6 +21,11 @@ body {
   max-width: 500px;
   width: 100%;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+#pico{
+  height: 30px;
+  margin-right: 5px;
 }
 
 .secundario{
