@@ -13,7 +13,7 @@
   <div class="container">
     <header>
       <img src="LogoBlockChain.png" alt="Logo ONG" class="logo"/>
-      <button id="connectButton" class="button">Conectar con MetaMask</button>
+      <button class="button" onclick="connectWallet()">Conectar con MetaMask</button>
     </header>
 
     <section class="wallet-section">
@@ -46,9 +46,32 @@
     </section>
 
     <section class="balance-section">
-      <h2 class="primario">Tu balance de tokens</h2>
-      <pre id="balance" class="secundario">Cargando...</pre>
-    </section>
+    <h2 class="primario">Tu balance de tokens</h2>
+    <div id="balance" class="token-grid">
+      <div class="loading-container">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Descripciones de tokens guardadas para usar en JavaScript -->
+  <div class="token-descriptions">
+      <div id="desc-0">¡Calienta corazones con una taza de café! Sé esa persona que escucha, acompaña y devuelve la dignidad a quienes viven en la calle.</div>
+
+      <div id="desc-1">¡Conviértete en la alegría de nuestros mayores! Sé su compañía favorita, su mejor pareja de bingo y el oyente perfecto para sus historias de vida.</div>
+
+      <div id="desc-2">¡Llena el armario de quien más lo necesita! Transforma tu ropa en buen estado en sonrisas y dignidad para personas en situación vulnerable.</div>
+
+      <div id="desc-3">¡Pon amor en cada plato que sirvas! Cocina, organiza y limpia para que nadie se quede sin una comida caliente y una experiencia digna.</div>
+
+      <div id="desc-4">¡Sé el mentor que cambiará su futuro! Ayuda a niños a superar sus dificultades académicas y abre puertas a un mundo lleno de oportunidades.</div>
+
+      <div id="desc-5">¡Convierte tu energía en alimentos para familias! Recoge, organiza y distribuye productos que llenarán mesas que de otro modo estarían vacías.</div>
+  </div>
+  
+  <script>
+    // Este es solo el contenedor HTML, el JavaScript va en otro archivo
+  </script>
   </div>
 </body>
 </html>
