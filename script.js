@@ -100,8 +100,7 @@ const getTokenBalance = async () => {
 
       for (const id of ids) {
         const balance = await contract.balanceOf(address, id);
-        const formattedBalance = Number(balance.toString()).toFixed(2);
-        balancesText += `Tienes ${formattedBalance} tokens de ${tokenNames[id]} (ID: ${id})\n`;
+        balancesText += `Tienes ${balance.toString()} tokens de ${tokenNames[id]} (ID: ${id})\n`;
       }
 
       balanceList.textContent = balancesText; // Asignamos el texto al <pre>
