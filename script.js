@@ -95,22 +95,24 @@ const getTokenBalance = async () => {
     try {
       const address = await signer.getAddress();
       const ids = Object.keys(tokenNames).map(Number);
-      balanceList.innerHTML = ''; // Limpiamos antes
+
+      let balancesText = ''; // Iniciamos un string vacío
 
       for (const id of ids) {
         const balance = await contract.balanceOf(address, id);
-        const li = document.createElement('li');
-        li.textContent = `Tienes ${balance.toString()} tokens de ${tokenNames[id]} (ID: ${id})`;
-        balanceList.appendChild(li);
+        balancesText += `Tienes ${balance.toString()} tokens de ${tokenNames[id]} (ID: ${id})\n`;
       }
+
+      balanceList.textContent = balancesText; // Asignamos el texto al <pre>
     } catch (error) {
       console.error('Error al obtener el balance:', error);
-      balanceList.innerHTML = '<li>Error al obtener el balance.</li>';
+      balanceList.textContent = 'Error al obtener el balance.';
     }
   } else {
-    balanceList.innerHTML = '<li>Conecta MetaMask primero.</li>';
+    balanceList.textContent = 'Conecta MetaMask primero.';
   }
 };
+
 
 const showStatus = (message, type = 'error') => {
   status.textContent = message;
